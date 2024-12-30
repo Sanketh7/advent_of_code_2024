@@ -3,7 +3,7 @@ create day:
 
 build day:
     mkdir -p ./build
-    g++-14 --std=c++20 ./{{day}}/main.cpp -o ./build/{{day}}
+    g++-14 -Wall --std=c++20 ./{{day}}/main.cpp -o ./build/{{day}}
 
 run day: (build day)
     ./build/{{day}} < ./{{day}}/input.in
